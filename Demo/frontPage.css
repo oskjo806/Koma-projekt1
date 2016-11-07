@@ -1,19 +1,24 @@
 h1{
 	font-size: 8vw;
+	font-family: "Agency FB";
 	text-align: center;
-	padding-top: 4vw;
+	margin: 4vw 0;
+	color: grey;
 }
 
-#achButton{
+#achievementButton{
 	position: relative;
-	width: 60vw;
+	width: 70vw;
 	height: 18vw;
-	margin: 10vh 20vw 0;
-	background-color: green;
+	margin: 10vh 15vw 0;
+	background-color: rgb(240,240,240);
+	border-radius: 5px;
+	border: 15px solid grey;
+	box-shadow: 0 5px 25px rgba(0, 0, 0, 0.4);
 }
 
 #container{
 	height: 100vh;
 	width: 100vw;
-	background-color: blue;
+	background-color: rgb(240,240,240);
 }
