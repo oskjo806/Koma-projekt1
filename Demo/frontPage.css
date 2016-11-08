@@ -1,24 +1,53 @@
-h1{
-	font-size: 8vw;
+body{
+	margin: 0;
+	background-color: rgb(245,245,245);
+}
+
+#percentage{
 	font-family: "Agency FB";
 	text-align: center;
-	margin: 4vw 0;
 	color: grey;
+	margin: 0;
+	font-weight: bold;
+	font-size: 8vw;
+}
+
+#achievementTextButton{
+	font-family: "Agency FB";
+	text-align: center;
+	color: grey;
+	margin: 0;
+	font-weight: bold;
+	font-size: 10vw;
 }
 
 #achievementButton{
 	position: relative;
 	width: 70vw;
 	height: 18vw;
-	margin: 10vh 15vw 0;
+	margin: 8vh 14vw 0;
 	background-color: rgb(240,240,240);
 	border-radius: 5px;
-	border: 15px solid grey;
+	border: 6px solid grey;
 	box-shadow: 0 5px 25px rgba(0, 0, 0, 0.4);
 }
 
 #container{
 	height: 100vh;
 	width: 100vw;
-	background-color: rgb(240,240,240);
+}
+
+#circleExp{
+	height:50vh;
+	width:100vw;
+}
+
+#lowerContainer{
+	height: 50vh;
+	width: 100vw;
+	margin:0;
+}
+
+.navbar{
+	margin: 0;
 }
