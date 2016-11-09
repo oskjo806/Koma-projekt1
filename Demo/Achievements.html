@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset = "UTF-8">
+		<title>Achievements</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/yeti/bootstrap.min.css" />
+		<link href="circle.css" rel="stylesheet"/>
+		<link href="frontPage.css" rel="stylesheet"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+ 
+	</head>
+	<body>
+		<nav class="navbar navbar-default">
+			<div id="navContainer">
+				<!-- Brand and toggle get grouped for better mobile display -->
+	      		<div class="navbar-header">
+	        		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavBar" aria-expanded="false">
+			          	<span class="icon-bar"></span>
+			          	<span class="icon-bar"></span>
+			          	<span class="icon-bar"></span>
+		        	</button>
+		       		<a class="navbar-brand" href="#!/">BlaBla</a>
+	      		</div>
+
+			    <!-- Collect the nav links, forms, and other content for toggling -->
+		    	<div class="collapse navbar-collapse" id="myNavBar">
+		        	<ul class="nav navbar-nav">
+        			 	<li><a>Level</a></li>
+         				<li><a>Achievements</a></li>
+        			</ul>
+		      	</div><!-- /.navbar-collapse -->
+		    </div><!-- /.container-fluid -->
+	    </nav>
+
+  	<div class="view-frame container" ng-view></div>
+
+
+	<div id="container">
+		<div id="circleExp">
+			<div id="posCircle">
+				<div class="c100 p67 big green">
+						<div class="slice">
+						<div class="bar"></div>
+						<div class="fill"></div>
+						</div>
+				</div>
+			</div>
+			<div id="Level">12</div>
+		</div>
+		<div id="lowerContainer">
+			<div><h1 id="percentage">67/100 %</h1></div>
+			<div id="achievementButton"><p id="achievementTextButton">ACHIEVEMENTS</p></div>
+		</div>
+	</div>
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	</body>
+</html>
