@@ -3,14 +3,17 @@ body{
 }
 p{
 	font-family: bebas-neue, sans-serif;
+	font-size: 6vw;
 }
 h2{
 	font-family: bebas-neue, sans-serif;
+	font-size:7vw;
+	margin-bottom: 0vw;
 }
 .missionfilter{
 	position:fixed;
 	z-index: 1;
-	bottom: 0px;
+	bottom: 0;
 	width: 100vw;
 	margin: 0;
 	padding: 0;
@@ -18,7 +21,7 @@ h2{
 }
 .filterbutton{
 	float:left;
-	width: 25%;
+	width: 25vw;
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -39,34 +42,38 @@ h2{
 }
 .mission{
 	overflow: auto;
-	margin: 10px;
-	margin-top: 12px;
+	margin: 5vw;
+	margin-top: 5vw;
 	background-color: #9dbfd6 ;
-	border-radius: 20px;
-	box-shadow:0px 5px 15px #778899;
+	border-radius: 5vw;
+	box-shadow:0vw 1.5vw 6vw -1vw #111111;
 }
 .titel{
 	float:left;
 	text-align: center;
-	margin-left: 20px;
+	margin-left: 6vw;
+	height: auto;
+}
+.titel p{
+	text-align: left;
 }
 .checkbox{
 	float:right;
 }
 .checkbox img{
-	height: 18vw;
-	margin-right: 3vw;
+	height: 15vw;
+	margin: 5vw 4vw 5vw 0vw;
 }
 .counter{
 	float: right;
 	margin: 50px 20px 30px;
+	height: auto;
 }
 .counterbg{
-	overflow: auto;
-	background-color: #dfdfdf;
-	border-radius: 2vw;
 	height: 7vw;
-	width: 35vw;
+	width: auto;
+	background: #D3D3D3;
+	border-radius: 2vw;
 }
 .counterbg img{
 	height: 7vw;
@@ -78,13 +85,15 @@ h2{
 .incmin button{
 	border: none;
 	padding: 0px;
+	border-radius: 2vw;
 }
 .countvalue{
 	float: left;
+	margin: 0vw 1.5vw 0.6vw 1.5vw;
 }
 .countvalue p{
-	margin-top: auto;
-	margin-bottom: auto;
+	margin-bottom: 0;
+	font-size: 5vw;
 }
 .incplus{
 	float: right;
@@ -92,4 +101,5 @@ h2{
 .incplus button{
 	border: none;
 	padding: 0px;
+	border-radius: 2vw;
 }
