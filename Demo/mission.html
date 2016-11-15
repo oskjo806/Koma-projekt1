@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html ng-app= "myApp">
   <head>
     <meta charset = "UTF-8">
     <title>Missions</title>
@@ -13,11 +13,21 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
 
     <script src="//use.edgefonts.net/bebas-neue.js"></script>
+    <script>
+    myApp =angular.module('myApp',[]);
+    myApp.controller('myController',function($scope,$http){
+    $http.get('Data/Data.json').success(function(response)
+      {
+      $scope.myData =response;
+      });
+    });
+    </script>
  
   </head>
-  <body>
+  <body ng-controller="myController">
     <nav class="navbar navbar-default">
       <div id="navContainer">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -33,8 +43,8 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="myNavBar">
               <ul class="nav navbar-nav">
-                <li><a>Level</a></li>
-                <li><a>Achievements</a></li>
+                <li ng-class="{'active': isActive('/mission')}"><a class="fa fa-bolt" href="../Demo/mission.html">Missions</a></li>
+                <li ng-class="{'active': isActive('/Achievments')}"><a class="fa fa-tint" href="../Demo/Achievements.html">Level</a></li>
               </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
@@ -91,22 +101,20 @@
         </div>
       </div> 
 
-
-
 <!-- Test-kod för loopen -->
-<!--
-<div ng-repeat="quests in model.Achievements" ng-if="$index > 0">
+
+<div ng-repeat="data in myData">
   <div class="mission" class="panel panel-default">
     <div class="titel">
-        <h2>{{Title}}</h2>
-        <p>{{exp}}</p>
+        <h2>{{data.Title}}</h2>
+        <p>{{data.exp}}</p>
     </div>
-        <div ng-if="{{MissionType}} = checkbox">
+        <div ng-if="{{data.MissionType}} == 1">
           <div class="checkbox">
             <button><img src="Images/knappar/Button-OK.png" class="img-responsive" alt="Completed"></button>
           </div>
         </div>
-        <div ng-if="{{MissionType}} = counter">
+        <div ng-if="{{data.MissionType}} == 2">
           <div class="counter">
           <div class="counterbg">
             <div class="incmin">
@@ -123,80 +131,6 @@
         </div>
   </div> 
 </div>
--->
-
-
-
-
-
-
-
-
-
-<div class="mission" class="panel panel-default">
-        <div class="titel">
-          <h2>Make Dinner</h2>
-          <p>100 exp</p>
-        </div>
-        <div class="checkbox">
-          <button><img src="Images/knappar/Button-OK.png" class="img-responsive" alt="Completed"></button>
-        </div>
-      </div>  
-<div class="mission" class="panel panel-default">
-        <div class="titel">
-          <h2>Make Dinner</h2>
-          <p>100 exp</p>
-        </div>
-        <div class="checkbox">
-          <button><img src="Images/knappar/Button-OK.png" class="img-responsive" alt="Completed"></button>
-        </div>
-      </div> 
-<div class="mission" class="panel panel-default">
-        <div class="titel">
-          <h2>Make Dinner</h2>
-          <p>100 exp</p>
-        </div>
-        <div class="checkbox">
-          <button><img src="Images/knappar/Button-OK.png" class="img-responsive" alt="Completed"></button>
-        </div>
-      </div> 
-<div class="mission" class="panel panel-default">
-        <div class="titel">
-          <h2>Make Dinner</h2>
-          <p>100 exp</p>
-        </div>
-        <div class="checkbox">
-          <button><img src="Images/knappar/Button-OK.png" class="img-responsive" alt="Completed"></button>
-        </div>
-      </div> 
-<div class="mission" class="panel panel-default">
-        <div class="titel">
-          <h2>Make Dinner</h2>
-          <p>100 exp</p>
-        </div>
-        <div class="checkbox">
-          <button><img src="Images/knappar/Button-OK.png" class="img-responsive" alt="Completed"></button>
-        </div>
-      </div> 
-<div class="mission" class="panel panel-default">
-        <div class="titel">
-          <h2>Make Dinner</h2>
-          <p>100 exp</p>
-        </div>
-        <div class="checkbox">
-          <button><img src="Images/knappar/Button-OK.png" class="img-responsive" alt="Completed"></button>
-        </div>
-      </div> 
-
-
-
-
-
-
-
-
-
-
 
   </div>
   </body>
