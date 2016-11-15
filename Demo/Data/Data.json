@@ -1,0 +1,33 @@
+[
+      {
+         "Title":"Make 50 lunchboxes",
+         "exp":"1000 EXP",
+         "Filter":"Epic",
+         "MissionType":"2",
+         "CounterValue":"50"
+      },
+      {
+         "Title":"Clean household",
+         "exp":"300 EXP",
+         "Filter":"Common",
+         "MissionType":"1"
+      },
+      {
+         "Title":"Eat Lunchbox",
+         "exp":"100 EXP",
+         "Filter":"Daily",
+         "MissionType":"1"
+      },
+      {
+         "Title":"Do the dishes",
+         "exp":"200 EXP",
+         "Filter":"Common",
+         "MissionType":"1"
+      },
+      {
+         "Title":"Study 8-17",
+         "exp":"400 EXP",
+         "Filter":"Daily",
+         "MissionType":"1"
+      }
+   ]
