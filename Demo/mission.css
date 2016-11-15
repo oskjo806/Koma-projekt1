@@ -60,9 +60,14 @@ h2{
 .checkbox{
 	float:right;
 }
+.checkbox button{
+	border: none;
+	padding: 0px;
+	border-radius: 4vw;
+	margin: 5vw 4vw 5vw 0vw;
+}
 .checkbox img{
 	height: 15vw;
-	margin: 5vw 4vw 5vw 0vw;
 }
 .counter{
 	float: right;
