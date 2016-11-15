@@ -1,0 +1,110 @@
+body{
+	background-color: #699fc4; 
+}
+p{
+	font-family: bebas-neue, sans-serif;
+	font-size: 6vw;
+}
+h2{
+	font-family: bebas-neue, sans-serif;
+	font-size:7vw;
+	margin-bottom: 0vw;
+}
+.missionfilter{
+	position:fixed;
+	z-index: 1;
+	bottom: 0;
+	width: 100vw;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+.filterbutton{
+	float:left;
+	width: 25vw;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+.container-fluid{
+	padding: 0;
+	margin: 0;
+}
+.btn-primary{
+	background-color: #f6f7f8;
+	color: #ff00cc;
+	border-color: #ffffff;
+}
+.btn-primary:hover{
+	background-color: #dfdfdf ;
+	color: #ff00cc;
+	border-color: #ffffff;
+}
+.mission{
+	overflow: auto;
+	margin: 5vw;
+	margin-top: 5vw;
+	background-color: #9dbfd6 ;
+	border-radius: 5vw;
+	box-shadow:0vw 1.5vw 6vw -1vw #111111;
+}
+.titel{
+	float:left;
+	text-align: center;
+	margin-left: 6vw;
+	height: auto;
+}
+.titel p{
+	text-align: left;
+}
+.checkbox{
+	float:right;
+}
+.checkbox button{
+	border: none;
+	padding: 0px;
+	border-radius: 4vw;
+	margin: 5vw 4vw 5vw 0vw;
+}
+.checkbox img{
+	height: 15vw;
+}
+.counter{
+	float: right;
+	margin: 50px 20px 30px;
+	height: auto;
+}
+.counterbg{
+	height: 7vw;
+	width: auto;
+	background: #D3D3D3;
+	border-radius: 2vw;
+}
+.counterbg img{
+	height: 7vw;
+	width: auto;
+}
+.incmin{
+	float: left;
+}
+.incmin button{
+	border: none;
+	padding: 0px;
+	border-radius: 2vw;
+}
+.countvalue{
+	float: left;
+	margin: 0vw 1.5vw 0.6vw 1.5vw;
+}
+.countvalue p{
+	margin-bottom: 0;
+	font-size: 5vw;
+}
+.incplus{
+	float: right;
+}
+.incplus button{
+	border: none;
+	padding: 0px;
+	border-radius: 2vw;
+}
