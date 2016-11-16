@@ -1,19 +1,18 @@
 #Level{
-  position: relative;
+  position: absolute;
   text-align: center;
   height: 20vh;
-  width: 100vw;
-  margin: 0;
-  font-size: 30vw;
-  padding-top: 20vh;
-  font-family: "Agency FB";
+  width: 60vw;
+  margin-top: 8vw;
+  font-size: 32vw;
+  font-family: bebas-neue, sans-serif;
   font-weight: bold;
   color: purple;
-  letter-spacing: 10px;
+  letter-spacing: 5px;
 }
 
 #posCircle{
-  position: absolute;
+  position: relative;
   height: 50vh;
   width: 100vw;
   padding:15vh 20vw 0;
@@ -253,7 +252,7 @@
   border-radius: 50%;
   float: left;
   margin: 0 0.1em 0.1em 0;
-  background-color: #cccccc;
+  background-color:#adebad;	/*Ringen bakom allt, måsta vara samma som bakgrunden*/
 }
 .c100 *,
 .c100 *:before,
@@ -305,7 +304,7 @@
   display: block;
   content: " ";
   border-radius: 50%;
-  background-color: #f5f5f5;  /*Bakgrundsfärg*/
+  background-color: white;  /*Ringen bakom lvl*/
   width: 0.84em;
   height: 0.84em;
   -webkit-transition-property: all;
@@ -1044,7 +1043,7 @@
 
 .c100.green .bar,
 .c100.green .fill {
-  border-color: #4db53c !important;
+  border-color: #9dBFD6 !important;  /**/
 }
 
 .c100.green.dark .bar,
@@ -1059,4 +1058,9 @@
 .c100.orange.dark .bar,
 .c100.orange.dark .fill {
   border-color: #e08833 !important;
+}
+
+.c100.custom .bar,
+.c100.custom .fill {
+  border-color: #6cb3e3 !important;  /*EXP ringen*/
 }
