@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+<!-- denna koden ska cacha sidan och ska ligga i html-taggen manifest="demo.appcache" men kör vi den kan inte fonten ladda, filerna demo.appcache och .htaccess behövs också. i .htaccess är koden "AddType text/cache-manifest .appcache"  -->
 <html ng-app= "myApp">
   <head>
     <meta charset = "UTF-8">
@@ -86,7 +86,7 @@
 <!-- Test-kod för loopen -->
 
 <div ng-repeat="data in myData">
-  <div class="mission" class="panel panel-default">
+  <div class="mission" class="panel panel-default" ng-if="data.Filter == 'Epic'">
     <div class="titel">
         <h2>{{data.Title}}</h2>
         <p>{{data.exp}}</p>
@@ -103,7 +103,7 @@
               <button><img src="Images/knappar/Button-Counter-Minus.png" class="img-responsive" alt="Completed"></button>
             </div>
               <div class="countvalue">
-                <p>100</p>
+                <p>{{data.CounterValue}}</p>
               </div>
               <div class="incplus">
                <button><img src="Images/knappar/Button-Counter-Plus.png" class="img-responsive" alt="Completed"></button>

@@ -128,13 +128,14 @@ h2{
 	z-index: 1;
 	bottom: 0;
 	width: 100vw;
-	height: 45vw;
+	height: 22vw;
 	margin: 0;
 	padding: 0;
 	border: 0;
-	background: none; /* For browsers that do not support gradients */
-	background: -webkit-linear-gradient(top, #699fc4 , rgba(71,139,184,0)); 
-	background: -o-linear-gradient(top, #699fc4 , rgba(71,139,184,0)); 
-	background: -moz-linear-gradient(top, #699fc4 , rgba(71,139,184,0)); 
-	background: linear-gradient(to top, #699fc4  , rgba(71,139,184,0)); 
+	background: blue; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(top, #699fc4  , #699fc4, #699fc4 , #699fc4 , #699fc4 , #699fc4 , rgba(71,139,184,0)); 
+	background: -webkit-linear-gradient(top, #699fc4  , #699fc4, #699fc4 , #699fc4 , #699fc4 , #699fc4 , rgba(71,139,184,0));
+	background: -o-linear-gradient(top, #699fc4  , #699fc4, #699fc4 , #699fc4 , #699fc4 , #699fc4 , rgba(71,139,184,0)); 
+	background: -moz-linear-gradient(top, #699fc4  , #699fc4, #699fc4 , #699fc4 , #699fc4 , #699fc4 , rgba(71,139,184,0)); 
+	background: linear-gradient(to top, #699fc4  , #699fc4, #699fc4 , #699fc4 , #699fc4 , #699fc4 , rgba(71,139,184,0)); 
 }
