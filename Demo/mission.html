@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- denna koden ska cacha sidan och ska ligga i html-taggen manifest="demo.appcache" men kör vi den kan inte fonten ladda, filerna demo.appcache och .htaccess behövs också. i .htaccess är koden "AddType text/cache-manifest .appcache"  -->
-<html ng-app= "myApp">
+<html ng-app= "myApp" >
   <head>
     <meta charset = "UTF-8">
     <title>Missions</title>
@@ -17,12 +17,23 @@
     <script src="//use.edgefonts.net/bebas-neue.js"></script>
     <script>
     myApp =angular.module('myApp',[]);
-    myApp.controller('myController',function($scope,$http){
-    $http.get('Data/Data.json').success(function(response)
-      {
-      $scope.myData =response;
+    myApp.controller('myController',function($scope,$http) {
+      $http.get('Data/Data.json').success(function(response) {
+        $scope.myData =response;
       });
+      $scope.Filter = 'Common';
+      $scope.FilterEnabled = false;
+      $scope.Filterchoice = function(choice){
+        if($scope.Filter == choice){
+          $scope.FilterEnabled = !$scope.FilterEnabled;
+        }
+        else{
+          $scope.Filter = choice;
+          $scope.FilterEnabled = true;
+        }
+      }
     });
+
     </script>
  
   </head>
@@ -86,10 +97,10 @@
 <!-- Test-kod för loopen -->
 
 <div ng-repeat="data in myData">
-  <div class="mission" class="panel panel-default" ng-if="data.Filter == 'Epic'">
+  <div class="mission" class="panel panel-default" ng-if="!FilterEnabled || data.Filter == Filter">
     <div class="titel">
         <h2>{{data.Title}}</h2>
-        <p>{{data.exp}}</p>
+        <p>{{data.exp}} EXP</p>
     </div>
         <div ng-if="data.MissionType == 1">
           <div class="checkbox">
@@ -119,16 +130,16 @@
     <div class="missionfilter">
        <div class="container-fluid col-lg-3">
             <div class="filterbutton">
-                <button type="button" class="btn btn-primary btn-block"><img src="Images/FilterIcon-1Daily.png" class="img-responsive" alt="Daily"></button>
+                <button type="button" ng-click="Filterchoice('Daily')" class="btn btn-primary btn-block"><img src="Images/FilterIcon-1Daily.png" class="img-responsive" alt="Daily"></button>
             </div>
             <div class="filterbutton">
-                <button type="button" class="btn btn-primary btn-block"><img src="Images/FilterIcon-2Common.png" class="img-responsive" alt="Common"></button>
+                <button type="button" ng-click="Filterchoice('Common')" class="btn btn-primary btn-block"><img src="Images/FilterIcon-2Common.png" class="img-responsive" alt="Common"></button>
             </div>
             <div class="filterbutton">
-                <button type="button" class="btn btn-primary btn-block"><img src="Images/FilterIcon-3Epic.png" class="img-responsive" alt="Epic"></button>
+                <button type="button" ng-click="Filterchoice('Epic')" class="btn btn-primary btn-block"><img src="Images/FilterIcon-3Epic.png" class="img-responsive" alt="Epic"></button>
             </div>
             <div class="filterbutton">
-                <button type="button" class="btn btn-primary btn-block"><img src="Images/FilterIcon-4Completed.png" class="img-responsive" alt="Completed"></button>
+                <button type="button" ng-click="Filterchoice('Completed')" class="btn btn-primary btn-block"><img src="Images/FilterIcon-4Completed.png" class="img-responsive" alt="Completed"></button>
             </div>
         </div>
     </div>
