@@ -1,5 +1,4 @@
-
-var a = 568;
+var a = getExp();
 var levelcounter = 1;
 var b = 1000;
 
@@ -12,11 +11,10 @@ function procent(a, b) {
 		
 		while(a >= b){
 			levelup(a,b);
-			a = a- b;
+			setExperience(a-b);
 			b += 1000;
 		}
 		var procent = Math.round( (a*100) / (b) );
-		console.log(procent);
     //return procent;
 	var element = document.getElementById("demo");
 	element.classList.add("p" + procent);
