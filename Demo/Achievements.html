@@ -13,10 +13,10 @@
 		<script src="//use.edgefonts.net/bebas-neue.js"></script>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
- 
+		<script src="EXP.js"></script>
  
 	</head>
-	<body>
+	<body onload= "load()">
 		<nav class="navbar navbar-default navbar-fixed-top">
 			<div id="navContainer">
 				<!-- Brand and toggle get grouped for better mobile display -->
@@ -42,19 +42,19 @@
   	<div class="view-frame container" ng-view></div>
 
 
-	<div id="container">
+	<div  id="container">
 		<div id="circleExp">
 			<div id="posCircle">
-				<div class="c100 p100 big custom">
+				<div id="demo" class="c100 big custom">
 						<div class="slice">
 						<div class="bar"></div>
 						<div class="fill"></div>
 						</div>
 				</div>
-				<div id="Level">25</div>
+				<div class="Level" id="ding"></div>
 			</div>
 			
-			<div><h1 id="percentage">0 %</h1></div>
+			<div><h1 class="percentage" id="percent"></h1></div>
 		</div>
 		<div id="lowerContainer">
 			<button class="btn btn-default" onclick="window.location.href='mission.html'"><p id="missionTextButton">MISSIONS</p></button>

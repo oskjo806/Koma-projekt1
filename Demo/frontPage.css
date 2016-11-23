@@ -1,9 +1,9 @@
 body{
 	margin: 0;
-	background-color: #adebad /*!important */;
+	background-color: #8bcb73 !important ;
 }
 
-#percentage{
+.percentage{
 	position: relative;
 	font-family: "Agency FB";
 	text-align: center;
@@ -11,15 +11,15 @@ body{
 	margin: 0 0 0 20vw;
 	font-weight: bold;
 	font-size: 8vw;
-	padding: 6vw 0 0 0;
-	height: 10vh;
+	padding: 0;
+	height: 6vh;
 	width: 60vw;
 }
 
 #missionTextButton{
 	font-family: bebas-neue, sans-serif;
 	text-align: center;
-	color: white; 
+	color: #434045; 
 	margin: 0 !important;
 	font-size: 12vw;
 	letter-spacing: 1.5px;
@@ -30,7 +30,7 @@ body{
 	width: 60vw;
 	height: 19vw;
 	margin: 2vh 19vw 0;
-	background-color: #9dBFD6;
+	background-color: #b3dba4;
 	
 	border-radius: 5vw;
 	border: 0;
