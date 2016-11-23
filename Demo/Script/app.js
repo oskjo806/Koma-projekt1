@@ -1,7 +1,7 @@
-String dataVarName = "MissionData";
-String expVarName = "ExpValue";
+var dataVarName = "MissionData";
+var expVarName = "ExpValue";
 
-function saveData(String varName, String value){
+function saveData( varName, value){
 	if (typeof(Storage) !== "undefined") {
     	localStorage.setItem(varName, value);
     	return true;
@@ -12,6 +12,7 @@ function saveData(String varName, String value){
 
 function getData(varName){
 	var data = "";
+	console.log(data);
 	if (typeof(Storage) !== "undefined") {
     	data = localStorage.getItem(varName);
     	if(data === null){
@@ -23,20 +24,6 @@ function getData(varName){
 	return data;
 }
 
-function createMission(mission){
-	
-}
-
-function getAllMissionData(){
-	var data = JSON.parse(getData(dataVarName));
-	var missions = new Mission[data.length];
-
-	for(int i = 0; i < data.length; ++i){
-		missions[i] = createMission(data.missions[i]);
-	}
-	return missions;
-}
-
 function getExp(){
 	var experience = getData(expVarName);
 	if(experience == ""){
@@ -46,6 +33,6 @@ function getExp(){
 	return parseInt(experience);
 }
 
-function setExperience(int exp){
+function setExperience(exp){
 	saveData(expVarName, exp);
 }
