@@ -24,12 +24,12 @@ function getData(varName){
 }
 
 function createMission(mission){
-	//to-do
+	
 }
 
 function getAllMissionData(){
 	var data = JSON.parse(getData(dataVarName));
-	Mission missions = new Mission[data.length];
+	var missions = new Mission[data.length];
 
 	for(int i = 0; i < data.length; ++i){
 		missions[i] = createMission(data.missions[i]);
@@ -38,7 +38,7 @@ function getAllMissionData(){
 }
 
 function getExp(){
-	String experience = getData(expVarName);
+	var experience = getData(expVarName);
 	if(experience == ""){
 		saveData(expVarName, 0);
 		return 0;
