@@ -1,11 +1,11 @@
 
-var a = 1560;
+var a = 568;
 var levelcounter = 1;
 var b = 1000;
 
 function load() {
 	procent(a, b);
-	document.getElementById("lervel").innerHTML = levelcounter;
+	document.getElementById("ding").innerHTML = levelcounter;
 }
 
 function procent(a, b) {
@@ -13,7 +13,7 @@ function procent(a, b) {
 		while(a >= b){
 			levelup(a,b);
 			a = a- b;
-			b += 500;
+			b += 1000;
 		}
 		var procent = Math.round( (a*100) / (b) );
 		console.log(procent);
@@ -25,5 +25,4 @@ function procent(a, b) {
 
 function levelup(a,b){
 	levelcounter += 1;
-	document.getElementById("ding").innerHTML = levelcounter;
 }
