@@ -5,6 +5,7 @@ var b = 1000;
 function load() {
 	procent(a, b);
 	document.getElementById("ding").innerHTML = levelcounter;
+	
 }
 
 function procent(a, b) {
@@ -15,10 +16,9 @@ function procent(a, b) {
 			b += 1000;
 		}
 		var procent = Math.round( (a*100) / (b) );
-    //return procent;
 	var element = document.getElementById("demo");
 	element.classList.add("p" + procent);
-	document.getElementById("percent").innerHTML = procent + " %";
+	document.getElementById("percent").innerHTML = a +"/" + b;
 }
 
 function levelup(a,b){

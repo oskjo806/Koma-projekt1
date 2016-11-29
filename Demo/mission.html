@@ -15,21 +15,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
 
     <script src="//use.edgefonts.net/bebas-neue.js"></script>
-    <script>
-    myApp =angular.module('myApp',[]);
-    myApp.controller('myController',function($scope,$http) {
-      $http.get('Data/Data.json').success(function(response) {
-        $scope.myData =response;
-      });
-      $scope.Filter = 'Daily';
-      $scope.FilterEnabled = false;
-      $scope.Filterchoice = function(choice){
-        $scope.Filter = choice;
-        $scope.FilterEnabled = true;
-      }
-    });
-
-    </script>
+	<script src="Script/app.js"></script>
  
   </head>
   <body ng-controller="myController" ng-class="Filter">
@@ -42,7 +28,7 @@
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="#!/"><p>BlaBla</p></a>
+              <a class="navbar-brand" href="Achievements.html"><p>BlaBla</p></a>
             </div>
 
           <!-- Collect the nav links, forms, and other content for toggling -->
@@ -58,38 +44,6 @@
     <div class="view-frame container" ng-view></div>
 
   <div class="row-fluid">
-    
-      <div class="mission" ng-class="Filter" class="panel panel-default">
-        <div class="titel">
-          <h2>Make Dinner</h2>
-          <p>100 exp</p>
-        </div>
-        <div class="checkbox">
-          <button><img src="Images/knappar/Button-OK.png" class="img-responsive" alt="Completed"></button>
-        </div>
-      </div> 
-
-      <div class="mission" ng-class="Filter" class="panel panel-default">
-        <div class="titel">
-          <h2>Make 25 Lunchboxes</h2>
-          <p>100 exp</p>
-        </div>
-        <div class="counter">
-          <div class="counterbg">
-            <div class="incmin">
-            <button><img src="Images/knappar/Button-Counter-Minus.png" class="img-responsive" alt="Completed"></button>
-            </div>
-            <div class="countvalue">
-            <p>100</p>
-            </div>
-            <div class="incplus">
-            <button><img src="Images/knappar/Button-Counter-Plus.png" class="img-responsive" alt="Completed"></button>
-            </div>
-          </div>
-        </div>
-      </div> 
-
-<!-- Test-kod för loopen -->
 
 <div ng-repeat="data in myData">
   <div class="mission" ng-class="Filter" class="panel panel-default" ng-if="data.Filter == Filter">
@@ -99,7 +53,7 @@
     </div>
         <div ng-if="data.MissionType == 1">
           <div class="checkbox">
-            <button><img src="Images/knappar/Button-OK.png" class="img-responsive" alt="Completed"></button>
+            <button ng-click="Filterchange('Completed', data.exp); write(data.id)"><img src="Images/knappar/Button-OK.png" class="img-responsive" alt="Completed"></button>
           </div>
         </div>
         <div ng-if="data.MissionType == 2">
@@ -116,8 +70,14 @@
              </div>
            </div>
          </div>
-        </div>
+        </div> 
   </div> 
+<!--   <div class="mission" class="panel panel-default" ng-if="getData(data.id) == 1">
+	<div class="titel">
+        <h2>{{data.Title}}</h2>
+        <p>{{data.exp}} EXP</p>
+    </div>
+  </div>  -->
 </div>
 
 <div class="gradient" ng-class="Filter"></div>
