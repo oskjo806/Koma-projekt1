@@ -21,23 +21,18 @@
       $http.get('Data/Data.json').success(function(response) {
         $scope.myData =response;
       });
-      $scope.Filter = 'Common';
+      $scope.Filter = 'Daily';
       $scope.FilterEnabled = false;
       $scope.Filterchoice = function(choice){
-        if($scope.Filter == choice){
-          $scope.FilterEnabled = !$scope.FilterEnabled;
-        }
-        else{
-          $scope.Filter = choice;
-          $scope.FilterEnabled = true;
-        }
+        $scope.Filter = choice;
+        $scope.FilterEnabled = true;
       }
     });
 
     </script>
  
   </head>
-  <body ng-controller="myController">
+  <body ng-controller="myController" ng-class="Filter">
     <nav class="navbar navbar-default navbar-fixed-top">
       <div id="navContainer">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -64,7 +59,7 @@
 
   <div class="row-fluid">
     
-      <div class="mission" class="panel panel-default">
+      <div class="mission" ng-class="Filter" class="panel panel-default">
         <div class="titel">
           <h2>Make Dinner</h2>
           <p>100 exp</p>
@@ -74,7 +69,7 @@
         </div>
       </div> 
 
-      <div class="mission" class="panel panel-default">
+      <div class="mission" ng-class="Filter" class="panel panel-default">
         <div class="titel">
           <h2>Make 25 Lunchboxes</h2>
           <p>100 exp</p>
@@ -97,7 +92,7 @@
 <!-- Test-kod för loopen -->
 
 <div ng-repeat="data in myData">
-  <div class="mission" class="panel panel-default" ng-if="!FilterEnabled || data.Filter == Filter">
+  <div class="mission" ng-class="Filter" class="panel panel-default" ng-if="data.Filter == Filter">
     <div class="titel">
         <h2>{{data.Title}}</h2>
         <p>{{data.exp}} EXP</p>
@@ -125,7 +120,7 @@
   </div> 
 </div>
 
-<div class="gradient"></div>
+<div class="gradient" ng-class="Filter"></div>
 
     <div class="missionfilter">
        <div class="container-fluid col-lg-3">

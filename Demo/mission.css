@@ -1,6 +1,6 @@
-body{
+/*body{
 	background-color: #699fc4; 
-}
+}*/
 p{
 	font-family: bebas-neue, sans-serif;
 	font-size: 6vw;
@@ -59,9 +59,32 @@ h2{
 	overflow: auto;
 	margin: 5vw;
 	margin-top: 5vw;
-	background-color: #9dbfd6 ;
 	border-radius: 5vw;
 	box-shadow:0vw 1.5vw 6vw -1vw #111111;
+}
+.Daily{
+	background-color: #9dbfd6 ;	/*Uppdragsrutan*/
+}
+.Common{
+	background-color: #DAAA99 ;	/*Uppdragsrutan*/
+}
+.Epic{
+	background-color: #C797Ca ;	/*Uppdragsrutan*/
+}
+.Completed{
+	background-color: #E7D198 ;	/*Uppdragsrutan*/
+}
+body.Daily {
+	background-color: #699FC4	!important;	/*Uppdragsrutan*/
+}
+body.Common{
+	background-color: #C97D63	!important; /*Uppdragsrutan*/
+}
+body.Epic{
+	background-color: #B166AD	!important; /*Uppdragsrutan*/
+}
+body.Completed{
+	background-color: #DFBD61	!important; /*Uppdragsrutan*/
 }
 .titel{
 	float:left;
@@ -131,11 +154,37 @@ h2{
 	height: 22vw;
 	margin: 0;
 	padding: 0;
-	border: 0;
+	border: 0; 
+}
+.gradient.Daily{
 	background: blue; /* For browsers that do not support gradients */
 	background: -webkit-linear-gradient(top, #699fc4  , #699fc4, #699fc4 , #699fc4 , #699fc4 , #699fc4 , rgba(71,139,184,0)); 
 	background: -webkit-linear-gradient(top, #699fc4  , #699fc4, #699fc4 , #699fc4 , #699fc4 , #699fc4 , rgba(71,139,184,0));
 	background: -o-linear-gradient(top, #699fc4  , #699fc4, #699fc4 , #699fc4 , #699fc4 , #699fc4 , rgba(71,139,184,0)); 
 	background: -moz-linear-gradient(top, #699fc4  , #699fc4, #699fc4 , #699fc4 , #699fc4 , #699fc4 , rgba(71,139,184,0)); 
-	background: linear-gradient(to top, #699fc4  , #699fc4, #699fc4 , #699fc4 , #699fc4 , #699fc4 , rgba(71,139,184,0)); 
+	background: linear-gradient(to top, #699fc4  , #699fc4, #699fc4 , #699fc4 , #699fc4 , #699fc4 , rgba(71,139,184,0));
+}
+.gradient.Common{
+	background: orange; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(top, #C97D63  , #C97D63, #C97D63 , #C97D63 , #C97D63 , #C97D63 , rgba(71,139,184,0)); 
+	background: -webkit-linear-gradient(top, #C97D63  , #C97D63, #C97D63 , #C97D63 , #C97D63 , #C97D63 , rgba(71,139,184,0));
+	background: -o-linear-gradient(top, #C97D63  , #C97D63, #C97D63 , #C97D63 , #C97D63 , #C97D63 , rgba(71,139,184,0)); 
+	background: -moz-linear-gradient(top, #C97D63  , #C97D63, #C97D63 , #C97D63 , #C97D63 , #C97D63 , rgba(71,139,184,0)); 
+	background: linear-gradient(to top, #C97D63  , #C97D63, #C97D63 , #C97D63 , #C97D63 , #C97D63 , rgba(71,139,184,0));
+}
+.gradient.Epic{
+	background: purple; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(top, #B166AD  , #B166AD, #B166AD , #B166AD , #B166AD , #B166AD , rgba(71,139,184,0)); 
+	background: -webkit-linear-gradient(top, #B166AD  , #B166AD, #B166AD , #B166AD , #B166AD , #B166AD , rgba(71,139,184,0));
+	background: -o-linear-gradient(top, #B166AD  , #B166AD, #B166AD , #B166AD , #B166AD , #B166AD , rgba(71,139,184,0)); 
+	background: -moz-linear-gradient(top, #B166AD  , #B166AD, #B166AD , #B166AD , #B166AD , #B166AD , rgba(71,139,184,0)); 
+	background: linear-gradient(to top, #B166AD  , #B166AD, #B166AD , #B166AD , #B166AD , #B166AD , rgba(71,139,184,0));
+}
+.gradient.Completed{
+	background: gold; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(top, #DFBD61  , #DFBD61, #DFBD61 , #DFBD61 , #DFBD61 , #DFBD61 , rgba(71,139,184,0)); 
+	background: -webkit-linear-gradient(top, #DFBD61  , #DFBD61, #DFBD61 , #DFBD61 , #DFBD61 , #DFBD61 , rgba(71,139,184,0));
+	background: -o-linear-gradient(top, #DFBD61  , #DFBD61, #DFBD61 , #DFBD61 , #DFBD61 , #DFBD61 , rgba(71,139,184,0)); 
+	background: -moz-linear-gradient(top, #DFBD61  , #DFBD61, #DFBD61 , #DFBD61 , #DFBD61 , #DFBD61 , rgba(71,139,184,0)); 
+	background: linear-gradient(to top, #DFBD61  , #DFBD61, #DFBD61 , #DFBD61 , #DFBD61 , #DFBD61 , rgba(71,139,184,0));
 }
