@@ -15,19 +15,9 @@ function missionload(){
 	}
 	
 	var procent = Math.round( (a*100) / (b) );
-	document.getElementById("testdemo").innerHTML = a +"/" + b;
+	document.getElementById("testdemo").innerHTML = a +"/" + b + " EXP";
 }
 
-function returnPercent(){
-	while(a >= b){
-			levelup(a,b);
-			a = a-b;
-			b += 1000;
-		}
-		var procent = Math.round( (a*100) / (b) );
-		
-	return procent;
-}
 
 function procent(a, b) {
 		
@@ -43,8 +33,19 @@ function procent(a, b) {
 
 }
 
+function getPercent(){
+	while(a >= b){
+			levelup(a,b);
+			a = a-b;
+			b += 1000;
+		}
+		var procent = Math.round( (a*100) / (b) );
+	return procent;
+}
+
 function levelup(a,b){
 	levelcounter += 1;
 }
+
 
 

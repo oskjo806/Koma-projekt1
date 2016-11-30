@@ -31,14 +31,12 @@
               </button>
 				
               <a class="navbar-brand" href="Achievements.html"><p>BlaBla</p></a>
-            <div class="navbar-brand" id="navfilter"><p>{{Filter}} quests</p><div> 
+            <div class="navbar-brand" id="navfilter"><p ng-class="Filter">{{Filter}} quests</p><div> 
             </div>
 			</div>
-				
 				<div class="progress">
 					<div class="progress-bar progress-bar-success" role="progressbar" 
-						aria-valuemin="0" aria-valuemax="100" style="width: 42%">
-						
+						aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">	
 					</div>
 					<p id="testdemo"></p>
 				</div>
@@ -64,7 +62,7 @@
     </div>
         <div ng-if="data.MissionType == 1">
           <div class="checkbox"   >
-            <button ng-click="Filterchange('Completed', data.exp); write(data.id); buttonload(); mystyle = {'width': '42%'}"><img src="Images/knappar/Button-OK.png" class="img-responsive" alt="Completed"></button>
+            <button type="button" class="btn" ng-click="Filterchange('Completed', data.exp); write(data.id); buttonload(); expLoad() "><img src="Images/knappar/Button-OK.png" class="img-responsive" alt="Completed"></button>
           </div>
         </div>
         <div ng-if="data.MissionType == 2">

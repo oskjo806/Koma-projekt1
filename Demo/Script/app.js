@@ -52,17 +52,35 @@ var expVarName = "ExpValue";
 			var a = getExp();
 			var b = 1000;
 			while(a >= b){
-			levelup(a,b);
-			a = a-b;
-			b += 1000;
+				levelup(a,b);
+				a = a-b;
+				b += 1000;
 			}
 			var procent = Math.round( (a*100) / (b) );
-			document.getElementById("testdemo").innerHTML = a +"/" + b;
+			document.getElementById("testdemo").innerHTML = a +"/" + b + " EXP";
 			
+		}
+		
+		$scope.expLoad = function(){
+			var a = getExp();
+			var b = 1000;
+			
+			while(a >= b){
+				levelup(a,b);
+				a = a-b;
+				b += 1000;
+			}
+			var procent = Math.round( (a*100) / (b) );
+			
+			var valeur = procent;
+			$('.progress-bar').css('width', valeur+'%').attr('aria-valuenow', valeur);    
 		}
 	  
     });
 
+	
+	
+	
 function saveData( varName, value){
 	if (typeof(Storage) !== "undefined") {
     	localStorage.setItem(varName, value);

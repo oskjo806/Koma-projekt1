@@ -15,7 +15,7 @@ h2{
 .progress{
 	width: 100vw;
 	padding: 0;
-	height: 2vh;
+	height: 3vh;
 	margin-bottom: 0;
 	border-style: none none solid none;
 	border-color: white;
@@ -27,17 +27,18 @@ h2{
 	z-index: 2;
 	position:fixed;
 	width: 100vw;
-	font-size: 9px;
+	font-size: 2vh;
 	text-align: center;
 	margin: 0;
 	padding: 0;
-	height: 1.5vh;
-	letter-spacing: 0.5px;
-	
+	height: 3vh;
+	margin-top:1px;
 }
 #navfilter{
 	position: fixed;
-	width: 100vw;
+	width: 70vw;
+	margin-left: 15vw;
+	margin-right: 15vw;
 	text-align: center;
 	z-index: 2;
 }
@@ -96,7 +97,7 @@ h2{
 	box-shadow:0vw 0vw 0vw 0vw #111111;
 }
 .row-fluid{
-	margin-top: 18vw;
+	margin-top: 20vw;
 	margin-bottom: 24vw;
 }
 .mission{
@@ -129,6 +130,27 @@ body.Epic{
 }
 body.Completed{
 	background-color: #DFBD61	!important; /*Uppdragsrutan*/
+}
+
+p.Daily {
+	background-color: #f6f7f8 !important;
+	color: #699FC4	!important;	/*Uppdragsrutan*/
+	text-shadow: 0.15vw -0.15vw darkblue;
+}
+p.Common{
+	background-color: #f6f7f8 !important;
+	color: #C97D63	!important; /*Uppdragsrutan*/
+	text-shadow: 0.15vw -0.15vw black;
+}
+p.Epic{
+	background-color: #f6f7f8 !important;
+	color: #B166AD	!important; /*Uppdragsrutan*/
+	text-shadow: 0.15vw -0.15vw purple;
+}
+p.Completed{
+	background-color: #f6f7f8 !important;
+	color: #DFBD61	!important; /*Uppdragsrutan*/
+	text-shadow: 0.15vw -0.15vw black;
 }
 .titel{
 	float:left;

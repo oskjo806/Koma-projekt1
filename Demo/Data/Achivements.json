@@ -1,0 +1,48 @@
+[{
+   "lat":"58.58987519999999",
+   "lon":"16.17643989999999",
+   "id": "campus-nkpg",
+   "images":[
+      "img/place/campus-norrköping.jpg"
+   ],
+   "name":"Achievements",
+   "quests":[
+      {
+         "Title": "Make 50 lunchboxes",
+         "exp":"1000 EXP",
+         "Filter":"Epic",
+         "MissionType":"counter",
+         "CounterValue":"50"
+      },
+      {
+         "Title": "Clean household",
+         "exp":"300 EXP",
+         "Filter":"Common",
+         "MissionType":"checkbox",
+      },
+      {
+         "Title": "Eat Lunchbox",
+         "exp":"100 EXP",
+         "Filter":"Daily",
+         "MissionType":"checkbox",
+      },
+      {
+         "Title": "Do the dishes",
+         "exp":"200 EXP",
+         "Filter":"Common",
+         "MissionType":"checkbox",
+      },
+      {
+         "Title": "Study 8-17",
+         "exp":"400 EXP",
+         "Filter":"Daily",
+         "MissionType":"checkbox",
+      },
+   ]
+}]
+
+/*       "date": "2016-09-06",
+         "day":"tisdag",
+         "temperature": "19.5",
+         "summary":"Halvklart",
+         "description":"Växlande molnighet över dagen"*/
