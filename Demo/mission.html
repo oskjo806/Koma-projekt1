@@ -46,14 +46,14 @@
   <div class="row-fluid">
 
 <div ng-repeat="data in myData">
-  <div class="mission" ng-class="Filter" class="panel panel-default" ng-if="data.Filter == Filter">
+  <div class="mission" ng-class="Filter" class="panel panel-default" ng-if="data.Filter == Filter && !idExists(data.id)" >
     <div class="titel">
         <h2>{{data.Title}}</h2>
         <p>{{data.exp}} EXP</p>
     </div>
         <div ng-if="data.MissionType == 1">
-          <div class="checkbox">
-            <button ng-click="Filterchange('Completed', data.exp); write(data.id)"><img src="Images/knappar/Button-OK.png" class="img-responsive" alt="Completed"></button>
+          <div class="checkbox"   >
+            <button ng-click="Filterchange('Completed', data.exp); write(data.id) "><img src="Images/knappar/Button-OK.png" class="img-responsive" alt="Completed"></button>
           </div>
         </div>
         <div ng-if="data.MissionType == 2">
@@ -72,12 +72,12 @@
          </div>
         </div> 
   </div> 
-<!--   <div class="mission" class="panel panel-default" ng-if="getData(data.id) == 1">
+<div class="mission" class="panel panel-default" ng-class="Filter" ng-if="Filter == 'Completed' && idExists(data.id)">
 	<div class="titel">
         <h2>{{data.Title}}</h2>
         <p>{{data.exp}} EXP</p>
     </div>
-  </div>  -->
+  </div>
 </div>
 
 <div class="gradient" ng-class="Filter"></div>
