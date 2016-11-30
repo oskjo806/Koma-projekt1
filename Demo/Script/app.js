@@ -9,8 +9,15 @@ var expVarName = "ExpValue";
       $scope.Filter = 'Daily';
 	  $scope.FilterEnabled = false;
       $scope.Filterchoice = function(choice){
+		if($scope.Filter == choice)
+		{
+			$scope.FilterEnabled = false;
+		}
+		else
+		{
         $scope.Filter = choice;
 		$scope.FilterEnabled = true;
+		}
       }
 	  $scope.Filterchange = function(change, exp){
 		if(change == "Completed"){
@@ -28,6 +35,19 @@ var expVarName = "ExpValue";
 	
 		
 	  }
+	  
+		$scope.idExists = function(id){
+		if(getData(id))
+		{	
+			console.log("exists");
+			return true;
+		}
+		else
+		{	
+			console.log("exists... not");
+			return false;
+		}
+}
 	  
     });
 
