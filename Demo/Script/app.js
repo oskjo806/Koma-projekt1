@@ -36,7 +36,7 @@ var expVarName = "ExpValue";
 		
 	  }
 	  
-		$scope.idExists = function(id){
+	  $scope.idExists = function(id){
 		if(getData(id))
 		{	
 			console.log("exists");
@@ -47,7 +47,19 @@ var expVarName = "ExpValue";
 			console.log("exists... not");
 			return false;
 		}
-}
+		}		
+		$scope.buttonload = function(){
+			var a = getExp();
+			var b = 1000;
+			while(a >= b){
+			levelup(a,b);
+			a = a-b;
+			b += 1000;
+			}
+			var procent = Math.round( (a*100) / (b) );
+			document.getElementById("testdemo").innerHTML = a +"/" + b;
+			
+		}
 	  
     });
 
