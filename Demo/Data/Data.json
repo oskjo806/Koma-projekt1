@@ -1,33 +1,188 @@
 [
       {
          "Title":"Make 50 lunchboxes",
-         "exp":"1000 EXP",
+         "exp":"1000",
          "Filter":"Epic",
          "MissionType":"2",
-         "CounterValue":"50"
+         "CounterValue":"50",
+		 "id":"a001"
       },
       {
          "Title":"Clean household",
-         "exp":"300 EXP",
+         "exp":"300",
          "Filter":"Common",
-         "MissionType":"1"
+         "MissionType":"1",
+		 "id":"a002"
       },
       {
          "Title":"Eat Lunchbox",
-         "exp":"100 EXP",
+         "exp":"100",
          "Filter":"Daily",
-         "MissionType":"1"
+         "MissionType":"1",
+		 "id":"a003"
       },
       {
          "Title":"Do the dishes",
-         "exp":"200 EXP",
+         "exp":"200",
          "Filter":"Common",
-         "MissionType":"1"
+         "MissionType":"1",
+		 "id":"a004"
       },
       {
          "Title":"Study 8-17",
-         "exp":"400 EXP",
+         "exp":"400",
          "Filter":"Daily",
-         "MissionType":"1"
+         "MissionType":"1",
+		 "id":"a005"
+      },
+      {
+         "Title":"Survive the day",
+         "exp":"1337",
+         "Filter":"Epic",
+         "MissionType":"1",
+		 "id":"a006"
+      },
+      {
+         "Title":"Attend lunch meeting",
+         "exp":"400",
+         "Filter":"Common",
+         "MissionType":"1",
+		 "id":"a007"
+      },
+      {
+         "Title":"Pass an exam",
+         "exp":"1000",
+         "Filter":"Epic",
+         "MissionType":"1",
+		 "id":"a008"
+      },
+      {
+         "Title":"Take out the trash",
+         "exp":"500",
+         "Filter":"Common",
+         "MissionType":"2",
+		 "CounterValue":"5",
+		 "id":"a009"
+      },
+      {
+         "Title":"Visit Kåkenhus",
+         "exp":"300",
+         "Filter":"Common",
+         "MissionType":"1",
+		 "id":"a010"
+      },
+      {
+         "Title":"Visit Bomullspinneriet",
+         "exp":"300",
+         "Filter":"Common",
+         "MissionType":"1",
+		 "id":"a011"
+      },
+      {
+         "Title":"Visit Spetsen",
+         "exp":"300",
+         "Filter":"Common",
+         "MissionType":"1",
+		 "id":"a012"
+      },
+      {
+         "Title":"Visit Kopparhammaren",
+         "exp":"300",
+         "Filter":"Common",
+         "MissionType":"1",
+		 "id":"a013"
+      },
+      {
+         "Title":"Visit Trappan",
+         "exp":"300",
+         "Filter":"Common",
+         "MissionType":"1",
+		 "id":"a014"
+      },
+      {
+         "Title":"Visit Täppan",
+         "exp":"300",
+         "Filter":"Common",
+         "MissionType":"1",
+		 "id":"a015"
+      },
+      {
+         "Title":"Visit Campus Valla",
+         "exp":"600",
+         "Filter":"Epic",
+         "MissionType":"1",
+		 "id":"a016"
+      },
+      {
+         "Title":"Visit Dalkarlen",
+         "exp":"300",
+         "Filter":"Common",
+         "MissionType":"1",
+		 "id":"a017"
+      },
+      {
+         "Title":"Visit Gripen",
+         "exp":"300",
+         "Filter":"Common",
+         "MissionType":"1",
+		 "id":"a018"
+      },
+      {
+         "Title":"Visit Konstantinopel",
+         "exp":"300",
+         "Filter":"Common",
+         "MissionType":"1",
+		 "id":"a019"
+      },
+      {
+         "Title":"Reserve a classroom",
+         "exp":"600",
+         "Filter":"Epic",
+         "MissionType":"1",
+		 "id":"a020"
+      },
+      {
+         "Title":"Sew 25 patches",
+         "exp":"1000",
+         "Filter":"Epic",
+         "MissionType":"2",
+		 "CounterValue":"25",
+		 "id":"a021"
+      },
+      {
+         "Title":"Recycle 120 cans",
+         "exp":"1000",
+         "Filter":"Epic",
+         "MissionType":"2",
+		 "CounterValue":"120",
+		 "id":"a022"
+      },
+      {
+         "Title":"Visit Klockan",
+         "exp":"300",
+         "Filter":"Common",
+         "MissionType":"1",
+		 "id":"a023"
+      },
+      {
+         "Title":"Eat breakfast",
+         "exp":"150",
+         "Filter":"Daily",
+         "MissionType":"1",
+		 "id":"a024"
+      },
+      {
+         "Title":"Check mailbox",
+         "exp":"50",
+         "Filter":"Daily",
+         "MissionType":"1",
+		 "id":"a025"
+      },
+      {
+         "Title":"Drink water",
+         "exp":"1",
+         "Filter":"Daily",
+         "MissionType":"1",
+		 "id":"a026"
       }
    ]
