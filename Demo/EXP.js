@@ -7,6 +7,28 @@ function load() {
 	document.getElementById("ding").innerHTML = levelcounter;
 }
 
+function missionload(){
+	while(a >= b){
+			levelup(a,b);
+			a = a-b;
+			b += 1000;
+	}
+	
+	var procent = Math.round( (a*100) / (b) );
+	document.getElementById("testdemo").innerHTML = a +"/" + b;
+}
+
+function returnPercent(){
+	while(a >= b){
+			levelup(a,b);
+			a = a-b;
+			b += 1000;
+		}
+		var procent = Math.round( (a*100) / (b) );
+		
+	return procent;
+}
+
 function procent(a, b) {
 		
 		while(a >= b){
@@ -18,8 +40,11 @@ function procent(a, b) {
 	var element = document.getElementById("demo");
 	element.classList.add("p" + procent);
 	document.getElementById("percent").innerHTML = a +"/" + b;
+
 }
 
 function levelup(a,b){
 	levelcounter += 1;
 }
+
+

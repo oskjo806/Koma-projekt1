@@ -12,6 +12,40 @@ h2{
 	margin-bottom: 0vw;
 	color:  #434045;
 }
+.progress{
+	width: 100vw;
+	padding: 0;
+	height: 2vh;
+	margin-bottom: 0;
+	border-style: none none solid none;
+	border-color: white;
+	border-width: 2px;
+	background-color: lightgrey;
+}
+
+#testdemo{
+	z-index: 2;
+	position:fixed;
+	width: 100vw;
+	font-size: 9px;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	height: 1.5vh;
+	letter-spacing: 0.5px;
+	
+}
+#navfilter{
+	position: fixed;
+	width: 100vw;
+	text-align: center;
+	z-index: 2;
+}
+
+.progress-bar{
+	background-color: #79DD8E; /*#8bcb73; #356e39;*/ 
+}
+
 .navbar{
 	background: #f6f7f8;
 }
@@ -50,6 +84,16 @@ h2{
 	background-color: #dfdfdf ;
 	color: #ff00cc;
 	border-color: #ffffff;
+}
+.btn-primary:focus{
+	border-bottom-color: #ffffff;
+	outline-color: transparent;
+}
+.btn-primary:active:hover, .btn-primary.active:hover, .open>.dropdown-toggle.btn-primary:hover, .btn-primary:active:focus, .btn-primary.active:focus, .open>.dropdown-toggle.btn-primary:focus, .btn-primary:active.focus, .btn-primary.active.focus, .open>.dropdown-toggle.btn-primary.focus{
+	background-color: #dfdfdf;
+	border-color: #ffffff;
+	outline-color: transparent;
+	box-shadow:0vw 0vw 0vw 0vw #111111;
 }
 .row-fluid{
 	margin-top: 18vw;

@@ -16,9 +16,10 @@
 
     <script src="//use.edgefonts.net/bebas-neue.js"></script>
 	<script src="Script/app.js"></script>
+	<script src="EXP.js"></script>
  
   </head>
-  <body ng-controller="myController" ng-class="Filter">
+  <body ng-controller="myController" ng-class="Filter" onload= 'missionload()'>
     <nav class="navbar navbar-default navbar-fixed-top">
       <div id="navContainer">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -28,9 +29,19 @@
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
               </button>
+				
               <a class="navbar-brand" href="Achievements.html"><p>BlaBla</p></a>
+            <div class="navbar-brand" id="navfilter"><p>{{Filter}} quests</p><div> 
             </div>
-
+			</div>
+				
+				<div class="progress">
+					<div class="progress-bar progress-bar-success" role="progressbar" 
+						aria-valuemin="0" aria-valuemax="100" style="width: 42%">
+						
+					</div>
+					<p id="testdemo"></p>
+				</div>
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="myNavBar">
               <ul class="nav navbar-nav">
@@ -53,7 +64,7 @@
     </div>
         <div ng-if="data.MissionType == 1">
           <div class="checkbox"   >
-            <button ng-click="Filterchange('Completed', data.exp); write(data.id) "><img src="Images/knappar/Button-OK.png" class="img-responsive" alt="Completed"></button>
+            <button ng-click="Filterchange('Completed', data.exp); write(data.id); buttonload(); mystyle = {'width': '42%'}"><img src="Images/knappar/Button-OK.png" class="img-responsive" alt="Completed"></button>
           </div>
         </div>
         <div ng-if="data.MissionType == 2">
