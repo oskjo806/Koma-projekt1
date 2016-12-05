@@ -1,112 +1,112 @@
 <!DOCTYPE html>
 <!-- denna koden ska cacha sidan och ska ligga i html-taggen manifest="demo.appcache" men kör vi den kan inte fonten ladda, filerna demo.appcache och .htaccess behövs också. i .htaccess är koden "AddType text/cache-manifest .appcache"  -->
 <html ng-app= "myApp" >
-  <head>
-    <meta charset = "UTF-8">
-    <title>Missions</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/yeti/bootstrap.min.css" />
-    <link href="circle.css" rel="stylesheet"/>
-    <link href="mission.css" rel="stylesheet"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <meta charset = "UTF-8">
+  <title>Missions</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/yeti/bootstrap.min.css" />
+  <link href="circle.css" rel="stylesheet"/>
+  <link href="mission.css" rel="stylesheet"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
 
-    <script src="//use.edgefonts.net/bebas-neue.js"></script>
-	<script src="Script/app.js"></script>
-	<script src="EXP.js"></script>
- 
-  </head>
-  <body ng-controller="myController" ng-class="Filter" onload= 'missionload()'>
-    <nav class="navbar navbar-default navbar-fixed-top">
-      <div id="navContainer">
-        <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavBar" aria-expanded="false">
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-              </button>
-				
-              <a class="navbar-brand" href="Achievements.html"><p>BlaBla</p></a>
-            <div class="navbar-brand" id="navfilter"><p ng-class="Filter">{{Filter}} quests</p><div> 
-            </div>
-			</div>
-				<div class="progress">
-					<div class="progress-bar progress-bar-success" role="progressbar" 
-						aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">	
-					</div>
-					<p id="testdemo"></p>
-				</div>
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="myNavBar">
-              <ul class="nav navbar-nav">
-                <li ng-class="{'active': isActive('/Achievments')}"><a class="fa fa-tint" href="../Demo/Achievements.html"><p>Level</p></a></li>
-                 <li ng-class="{'active': isActive('/mission')}"><a class="fa fa-bolt" href="../Demo/mission.html"><p>Missions</p></a></li>
-              </ul>
-            </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-      </nav>
+  <script src="//use.edgefonts.net/bebas-neue.js"></script>
+  <script src="Script/app.js"></script>
+  <script src="EXP.js"></script>
 
-    <div class="view-frame container" ng-view></div>
+</head>
+<body ng-controller="myController" ng-class="Filter" onload= 'missionload()'>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div id="navContainer">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavBar" aria-expanded="false">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
 
-  <div class="row-fluid">
+        <a class="navbar-brand" href="Achievements.html"><p>BlaBla</p></a>
+        <div class="navbar-brand" id="navfilter"><p ng-class="Filter">{{Filter}} quests</p><div> 
+        </div>
+      </div>
+      <div class="progress">
+       <div class="progress-bar progress-bar-success" role="progressbar" 
+       aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">	
+     </div>
+     <p id="testdemo"></p>
+   </div>
+   <!-- Collect the nav links, forms, and other content for toggling -->
+   <div class="collapse navbar-collapse" id="myNavBar">
+    <ul class="nav navbar-nav">
+      <li ng-class="{'active': isActive('/Achievments')}"><a class="fa fa-tint" href="../Demo/Achievements.html"><p>Level</p></a></li>
+      <li ng-class="{'active': isActive('/mission')}"><a class="fa fa-bolt" href="../Demo/mission.html"><p>Missions</p></a></li>
+    </ul>
+  </div><!-- /.navbar-collapse -->
+</div><!-- /.container-fluid -->
+</nav>
 
-<div ng-repeat="data in myData">
-  <div class="mission" ng-class="Filter" class="panel panel-default" ng-if="data.Filter == Filter && !idExists(data.id)" >
-    <div class="titel">
+<div class="view-frame container" ng-view></div>
+
+<div class="row-fluid">
+
+  <div ng-repeat="data in myData">
+    <div class="mission" ng-class="Filter" class="panel panel-default" ng-if="data.Filter == Filter && (!getMissionData(data.Title) || getMissionData(data.Title) < data.CounterValue)" >
+      <div class="titel">
         <h2>{{data.Title}}</h2>
         <p>{{data.exp}} EXP</p>
-    </div>
-        <div ng-if="data.MissionType == 1">
-          <div class="checkbox"   >
-            <button type="button" class="btn" ng-click="Filterchange('Completed', data.exp); write(data.id); buttonload(); expLoad() "><img src="Images/knappar/Button-OK.png" class="img-responsive" alt="Completed"></button>
-          </div>
+      </div>
+      <div ng-if="data.MissionType == 1">
+        <div class="checkbox"   >
+          <button type="button" class="btn" ng-click="Filterchange(getMissionData(data.Title), data.CounterValue, data.exp); writeMission(data.Title, 1); buttonload(); expLoad() "><img src="Images/knappar/Button-OK.png" class="img-responsive" alt="Completed"></button>
         </div>
-        <div ng-if="data.MissionType == 2">
-          <div class="counter">
+      </div>
+      <div ng-if="data.MissionType == 2">
+        <div class="counter">
           <div class="counterbg">
             <div class="incmin">
-              <button><img src="Images/knappar/Button-Counter-Minus.png" class="img-responsive" alt="Completed"></button>
+              <button ng-click="writeMission(data.Title, getMissionData(data.Title) - (getMissionData(data.Title) > 0))"><img src="Images/knappar/Button-Counter-Minus.png" class="img-responsive" alt="Completed"></button>
             </div>
-              <div class="countvalue">
-                <p>{{data.CounterValue}}</p>
-              </div>
-              <div class="incplus">
-               <button><img src="Images/knappar/Button-Counter-Plus.png" class="img-responsive" alt="Completed"></button>
-             </div>
+            <div class="countvalue">
+              <p>{{getMissionData(data.Title)}}</p>
+            </div>
+            <div class="incplus">
+              <button ng-click="writeMission(data.Title, getMissionData(data.Title) + 1); Filterchange(getMissionData(data.Title), data.CounterValue, data.exp)"><img src="Images/knappar/Button-Counter-Plus.png" class="img-responsive" alt="Completed"></button>
            </div>
          </div>
-        </div> 
-  </div> 
-<div class="mission" class="panel panel-default" ng-class="Filter" ng-if="Filter == 'Completed' && idExists(data.id)">
-	<div class="titel">
-        <h2>{{data.Title}}</h2>
-        <p>{{data.exp}} EXP</p>
+       </div>
+     </div> 
+   </div> 
+   <div class="mission" class="panel panel-default" ng-class="Filter" ng-if="Filter == 'Completed' && getMissionData(data.Title)">
+     <div class="titel">
+      <h2>{{data.Title}}</h2>
+      <p>{{data.exp}} EXP</p>
     </div>
   </div>
 </div>
 
 <div class="gradient" ng-class="Filter"></div>
 
-    <div class="missionfilter">
-       <div class="container-fluid col-lg-3">
-            <div class="filterbutton">
-                <button type="button" ng-click="Filterchoice('Daily')" class="btn btn-primary btn-block"><img src="Images/FilterIcon-1Daily.png" class="img-responsive" alt="Daily"></button>
-            </div>
-            <div class="filterbutton">
-                <button type="button" ng-click="Filterchoice('Common')" class="btn btn-primary btn-block"><img src="Images/FilterIcon-2Common.png" class="img-responsive" alt="Common"></button>
-            </div>
-            <div class="filterbutton">
-                <button type="button" ng-click="Filterchoice('Epic')" class="btn btn-primary btn-block"><img src="Images/FilterIcon-3Epic.png" class="img-responsive" alt="Epic"></button>
-            </div>
-            <div class="filterbutton">
-                <button type="button" ng-click="Filterchoice('Completed')" class="btn btn-primary btn-block"><img src="Images/FilterIcon-4Completed.png" class="img-responsive" alt="Completed"></button>
-            </div>
-        </div>
-    </div>
+<div class="missionfilter">
+ <div class="container-fluid col-lg-3">
+  <div class="filterbutton">
+    <button type="button" ng-click="Filterchoice('Daily')" class="btn btn-primary btn-block"><img src="Images/FilterIcon-1Daily.png" class="img-responsive" alt="Daily"></button>
+  </div>
+  <div class="filterbutton">
+    <button type="button" ng-click="Filterchoice('Common')" class="btn btn-primary btn-block"><img src="Images/FilterIcon-2Common.png" class="img-responsive" alt="Common"></button>
+  </div>
+  <div class="filterbutton">
+    <button type="button" ng-click="Filterchoice('Epic')" class="btn btn-primary btn-block"><img src="Images/FilterIcon-3Epic.png" class="img-responsive" alt="Epic"></button>
+  </div>
+  <div class="filterbutton">
+    <button type="button" ng-click="Filterchoice('Completed')" class="btn btn-primary btn-block"><img src="Images/FilterIcon-4Completed.png" class="img-responsive" alt="Completed"></button>
+  </div>
+</div>
+</div>
 
-  </body>
+</body>
 </html>
