@@ -62,7 +62,7 @@
       </div>
       <div ng-if="data.MissionType == 1">
         <div class="checkbox"   >
-          <button type="button" class="btn" ng-click="Filterchange(getMissionData(data.Title), data.CounterValue, data.exp); writeMission(data.Title, 1); buttonload(); expLoad() "><img src="Images/knappar/Button-OK.png" class="img-responsive" alt="Completed"></button>
+          <button type="button" class="btn" ng-click="writeMission(data.Title, 1); Filterchange(getMissionData(data.Title), data.CounterValue, data.exp); buttonload(); expLoad() "><img src="Images/knappar/Button-OK.png" class="img-responsive" alt="Completed"></button>
         </div>
       </div>
       <div ng-if="data.MissionType == 2">
