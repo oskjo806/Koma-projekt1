@@ -26,6 +26,7 @@ myApp.controller('myController',function($scope,$http) {
 			var currentexp = parseInt(getExp());
 			var completedexp = currentexp + parseInt(exp);
 			setExperience(completedexp);
+			completedexp = "";
 		}
 	}
 
