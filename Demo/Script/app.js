@@ -53,22 +53,25 @@ myApp.controller('myController',function($scope,$http) {
 	$scope.buttonload = function(){
 		var a = getExp();
 		var b = 1000;
+		var lvl = 1;
 		while(a >= b){
+			++lvl;
 			levelup(a,b);
 			a = a-b;
 			b += 1000;
 		}
 		var procent = Math.round( (a*100) / (b) );
 		document.getElementById("testdemo").innerHTML = a +"/" + b + " EXP";
-
+		document.getElementById("testlevel").innerHTML = "level " + lvl;
 	}
 
 	$scope.expLoad = function(){
 		var a = getExp();
 		var b = 1000;
-
+		
 		while(a >= b){
 			levelup(a,b);
+			
 			a = a-b;
 			b += 1000;
 		}
