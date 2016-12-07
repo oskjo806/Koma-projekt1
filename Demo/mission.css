@@ -40,9 +40,9 @@ h2{
 
 #navfilter{
 	position: fixed;
-	width: 70vw;
-	margin-left: 15vw;
-	margin-right: 15vw;
+	width: 60vw;
+	margin-left: 20vw;
+	margin-right: 20vw;
 	text-align: center;
 	z-index: 2;
 }
