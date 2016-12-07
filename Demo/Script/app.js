@@ -65,6 +65,20 @@ myApp.controller('myController',function($scope,$http) {
 		document.getElementById("testlevel").innerHTML = "level " + lvl;
 	}
 
+	$scope.isVisible = function(data) {
+		return data.Filter == $scope.Filter && (!$scope.getMissionData(data.Title) || $scope.getMissionData(data.Title) < data.CounterValue);
+	}
+
+	$scope.ifEmpty = function(){
+		console.log();
+		for(key in $scope.myData){
+			var value =  $scope.myData[key];
+			if($scope.isVisible(value)){
+				return false;	
+			}
+		}
+		return true;
+	}
 	$scope.expLoad = function(){
 		var a = getExp();
 		var b = 1000;
