@@ -58,7 +58,7 @@
 <div class="row-fluid">
 
   <div ng-repeat="data in myData">
-    <div class="mission" ng-class="Filter" class="panel panel-default " ng-if="data.Filter == Filter && (!getMissionData(data.Title) || getMissionData(data.Title) < data.CounterValue)" >
+    <div class="mission" ng-class="Filter" class="panel panel-default " ng-if="isVisible(data)" >
       <div class="titel">
         <h2>{{data.Title}}</h2>
         <p>{{data.exp}} EXP</p>
@@ -90,6 +90,10 @@
       <p>{{data.exp}} EXP</p>
     </div>
   </div>
+</div>
+</div>
+<div class="ifEmpty" class="panel panel-default" ng-if="ifEmpty() && Filter != 'Completed'">
+    <h2>All {{Filter}} missions are completed</h2>
 </div>
 
 <div class="gradient" ng-class="Filter"></div>

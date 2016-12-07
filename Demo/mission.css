@@ -112,6 +112,12 @@ h2{
 	box-shadow:0vw 1.5vw 6vw -1vw #111111;
 	height: 33vw;
 }
+.ifEmpty{
+	margin-top: 45vh;
+	width: 100vw;
+	height: 20vw;
+	text-align: center;
+}
 .Daily{
 	background-color: #9dbfd6 ;	/*Uppdragsrutan*/
 }
