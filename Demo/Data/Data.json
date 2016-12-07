@@ -112,6 +112,20 @@
 		 "CounterValue":"1"
       },
       {
+         "Title":"Buy Christmas Gifts",
+         "exp":"195",
+         "Filter":"Common",
+         "MissionType":"1",
+		 "CounterValue":"1"
+      },
+      {
+         "Title":"Watch Westworld",
+         "exp":"367",
+         "Filter":"Common",
+         "MissionType":"1",
+		 "CounterValue":"1"
+      },
+      {
          "Title":"Visit Dalkarlen",
          "exp":"300",
          "Filter":"Common",
@@ -178,6 +192,251 @@
          "Title":"Drink water",
          "exp":"1",
          "Filter":"Daily",
+         "MissionType":"1",
+		 "CounterValue":"1"
+      },
+      {
+         "Title":"Buy coffee",
+         "exp":"123",
+         "Filter":"Daily",
+         "MissionType":"1",
+		 "CounterValue":"1"
+      },
+      {
+         "Title":"Stretch your legs",
+         "exp":"28",
+         "Filter":"Daily",
+         "MissionType":"1",
+		 "CounterValue":"1"
+      },
+      {
+         "Title":"Say 'Hi' to a stranger",
+         "exp":"101",
+         "Filter":"Common",
+         "MissionType":"1",
+		 "CounterValue":"1"
+      },
+      {
+         "Title":"Drink Redbull Blue",
+         "exp":"36",
+         "Filter":"Common",
+         "MissionType":"1",
+		 "CounterValue":"1"
+      },
+      {
+         "Title":"Drink glögg",
+         "exp":"579",
+         "Filter":"Epic",
+         "MissionType":"1",
+		 "CounterValue":"1"
+      },
+      {
+         "Title":"Tame a cat",
+         "exp":"666",
+         "Filter":"Epic",
+         "MissionType":"1",
+		 "CounterValue":"1"
+      },
+      {
+         "Title":"Buy Christmas Gifts",
+         "exp":"195",
+         "Filter":"Common",
+         "MissionType":"1",
+		 "CounterValue":"1"
+      },
+      {
+         "Title":"Take a nap",
+         "exp":"8",
+         "Filter":"Daily",
+         "MissionType":"1",
+		 "CounterValue":"1"
+      },
+      {
+         "Title":"Borrow tea from neighbour",
+         "exp":"54",
+         "Filter":"Common",
+         "MissionType":"1",
+		 "CounterValue":"1"
+      },
+      {
+         "Title":"Drink tea with neighbour",
+         "exp":"177",
+         "Filter":"Common",
+         "MissionType":"1",
+		 "CounterValue":"1"
+      },
+      {
+         "Title":"Buy tea with neighbour",
+         "exp":"212",
+         "Filter":"Common",
+         "MissionType":"1",
+		 "CounterValue":"1"
+      },
+      {
+         "Title":"Run away",
+         "exp":"83",
+         "Filter":"Daily",
+         "MissionType":"2",
+		 "CounterValue":"5"
+      },
+      {
+         "Title":"Wear a silly hat",
+         "exp":"102",
+         "Filter":"Daily",
+         "MissionType":"1",
+		 "CounterValue":"1"
+      },
+      {
+         "Title":"Change background on pc",
+         "exp":"4",
+         "Filter":"Daily",
+         "MissionType":"1",
+		 "CounterValue":"1"
+      },
+      {
+         "Title":"Sing a song",
+         "exp":"40",
+         "Filter":"Daily",
+         "MissionType":"1",
+		 "CounterValue":"1"
+      },
+      {
+         "Title":"Don't complete mission",
+         "exp":"2",
+         "Filter":"Daily",
+         "MissionType":"1",
+		 "CounterValue":"1"
+      },
+      {
+         "Title":"Do 200 push-ups",
+         "exp":"757",
+         "Filter":"Common",
+         "MissionType":"2",
+		 "CounterValue":"200"
+      },
+      {
+         "Title":"Do 300 sit-ups",
+         "exp":"652",
+         "Filter":"Common",
+         "MissionType":"2",
+		 "CounterValue":"300"
+      },
+      {
+         "Title":"Finish a game",
+         "exp":"349",
+         "Filter":"Common",
+         "MissionType":"1",
+		 "CounterValue":"1"
+      },
+      {
+         "Title":"Call somebody",
+         "exp":"450",
+         "Filter":"Common",
+         "MissionType":"1",
+		 "CounterValue":"1"
+      },
+      {
+         "Title":"Send smiley to bestfriend",
+         "exp":"14",
+         "Filter":"Daily",
+         "MissionType":"1",
+		 "CounterValue":"1"
+      },
+      {
+         "Title":"Listen to favorite song",
+         "exp":"208",
+         "Filter":"Common",
+         "MissionType":"1",
+		 "CounterValue":"1"
+      },
+      {
+         "Title":"Climb Homeberg",
+         "exp":"55",
+         "Filter":"Epic",
+         "MissionType":"1",
+		 "CounterValue":"1"
+      },
+      {
+         "Title":"Climb Kebnekaise",
+         "exp":"2097",
+         "Filter":"Epic",
+         "MissionType":"1",
+		 "CounterValue":"1"
+      },
+      {
+         "Title":"Climb Mount Everest",
+         "exp":"8850",
+         "Filter":"Epic",
+         "MissionType":"1",
+		 "CounterValue":"1"
+      },
+      {
+         "Title":"Go to Mirum Galleria",
+         "exp":"300",
+         "Filter":"Common",
+         "MissionType":"1",
+		 "CounterValue":"1"
+      },
+      {
+         "Title":"Go to Ingelsta",
+         "exp":"350",
+         "Filter":"Common",
+         "MissionType":"1",
+		 "CounterValue":"1"
+      },
+      {
+         "Title":"Call me maybe",
+         "exp":"137.03",
+         "Filter":"Common",
+         "MissionType":"1",
+		 "CounterValue":"1"
+      },
+      {
+         "Title":"Try not to cry... cry",
+         "exp":"5",
+         "Filter":"Common",
+         "MissionType":"1",
+		 "CounterValue":"1"
+      },
+      {
+         "Title":"Watch a movie",
+         "exp":"254",
+         "Filter":"Common",
+         "MissionType":"1",
+		 "CounterValue":"1"
+      },
+      {
+         "Title":"Buy a christmas sweater",
+         "exp":"1224",
+         "Filter":"Epic",
+         "MissionType":"1",
+		 "CounterValue":"1"
+      },
+      {
+         "Title":"Netflix and chill",
+         "exp":"70",
+         "Filter":"Daily",
+         "MissionType":"1",
+		 "CounterValue":"1"
+      },
+      {
+         "Title":"Look up Hawt Dawg man",
+         "exp":"23",
+         "Filter":"Common",
+         "MissionType":"1",
+		 "CounterValue":"1"
+      },
+      {
+         "Title":"Be fabulous",
+         "exp":"88",
+         "Filter":"Daily",
+         "MissionType":"1",
+		 "CounterValue":"1"
+      },
+      {
+         "Title":"Complete all missions",
+         "exp":"10000",
+         "Filter":"Epic",
          "MissionType":"1",
 		 "CounterValue":"1"
       }
