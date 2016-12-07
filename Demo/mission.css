@@ -12,16 +12,19 @@ h2{
 	margin-bottom: 0vw;
 	color:  #434045;
 }
+
+
 .progress{
 	width: 100vw;
 	padding: 0;
 	height: 3vh;
-	margin-bottom: 0;
 	border-style: none none solid none;
 	border-color: white;
 	border-width: 2px;
 	background-color: lightgrey;
+	margin:0;
 }
+
 
 #testdemo{
 	z-index: 2;
@@ -34,6 +37,7 @@ h2{
 	height: 3vh;
 	margin-top:1px;
 }
+
 #navfilter{
 	position: fixed;
 	width: 70vw;

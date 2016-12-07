@@ -16,6 +16,9 @@ function missionload(){
 	
 	var procent = Math.round( (a*100) / (b) );
 	document.getElementById("testdemo").innerHTML = a +"/" + b + " EXP";
+	document.getElementById("testlevel").innerHTML = "level " + levelcounter;
+	var valeur = procent;
+	$('.progress-bar').css('width', valeur+'%').attr('aria-valuenow', valeur);
 }
 
 

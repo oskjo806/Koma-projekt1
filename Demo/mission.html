@@ -13,13 +13,14 @@
 
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+  <script src="//code.angularjs.org/snapshot/angular-animate.js"></script>
 
   <script src="//use.edgefonts.net/bebas-neue.js"></script>
   <script src="Script/app.js"></script>
   <script src="EXP.js"></script>
 
 </head>
-<body ng-controller="myController" ng-class="Filter" onload= 'missionload()'>
+<body ng-controller="myController" ng-class="Filter" onload='missionload()' ng-app="ngAnimate">
   <nav class="navbar navbar-default navbar-fixed-top">
     <div id="navContainer">
       <!-- Brand and toggle get grouped for better mobile display -->
@@ -30,16 +31,18 @@
           <span class="icon-bar"></span>
         </button>
 
-        <a class="navbar-brand" href="Achievements.html"><p>BlaBla</p></a>
-        <div class="navbar-brand" id="navfilter"><p ng-class="Filter">{{Filter}} quests</p><div> 
-        </div>
+        <a class="navbar-brand" href="Achievements.html"><p id="testlevel"></p></a>
+        <div class="navbar-brand" id="navfilter"><p ng-class="Filter">{{Filter}} quests</p>
       </div>
-      <div class="progress">
-       <div class="progress-bar progress-bar-success" role="progressbar" 
-       aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">	
-     </div>
-     <p id="testdemo"></p>
-   </div>
+	  
+		  <div class="progress">
+		   <div class="progress-bar progress-bar-success" role="progressbar" 
+		   aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">	
+		 </div>
+		<p id="testdemo"></p>
+		</div>	
+		
+	</div>
    <!-- Collect the nav links, forms, and other content for toggling -->
    <div class="collapse navbar-collapse" id="myNavBar">
     <ul class="nav navbar-nav">
@@ -55,7 +58,7 @@
 <div class="row-fluid">
 
   <div ng-repeat="data in myData">
-    <div class="mission" ng-class="Filter" class="panel panel-default" ng-if="data.Filter == Filter && (!getMissionData(data.Title) || getMissionData(data.Title) < data.CounterValue)" >
+    <div class="mission" ng-class="Filter" class="panel panel-default " ng-if="data.Filter == Filter && (!getMissionData(data.Title) || getMissionData(data.Title) < data.CounterValue)" >
       <div class="titel">
         <h2>{{data.Title}}</h2>
         <p>{{data.exp}} EXP</p>
@@ -69,13 +72,13 @@
         <div class="counter">
           <div class="counterbg">
             <div class="incmin">
-              <button ng-click="writeMission(data.Title, getMissionData(data.Title) - (getMissionData(data.Title) > 0))"><img src="Images/knappar/Button-Counter-Minus.png" class="img-responsive" alt="Completed"></button>
+              <button ng-click="writeMission(data.Title, getMissionData(data.Title) - (getMissionData(data.Title) > 0)); Filterchange(getMissionData(data.Title), data.CounterValue, data.exp); "><img src="Images/knappar/Button-Counter-Minus.png" class="img-responsive" alt="Completed"></button>
             </div>
             <div class="countvalue">
               <p>{{getMissionData(data.Title)}}</p>
             </div>
             <div class="incplus">
-              <button ng-click="writeMission(data.Title, getMissionData(data.Title) + 1); Filterchange(getMissionData(data.Title), data.CounterValue, data.exp)"><img src="Images/knappar/Button-Counter-Plus.png" class="img-responsive" alt="Completed"></button>
+              <button ng-click="writeMission(data.Title, getMissionData(data.Title) + 1); Filterchange(getMissionData(data.Title), data.CounterValue, data.exp); expLoad()"><img src="Images/knappar/Button-Counter-Plus.png" class="img-responsive" alt="Completed"></button>
            </div>
          </div>
        </div>
